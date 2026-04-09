@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic-Tac-Toe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <!-- main css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>TIC-TAC-TOE</h1>
+  <p>Two players &nbsp;·&nbsp; Or vs AI</p>
+</header>
+
+<!-- Mode -->
+<div class="mode-row">
+  <button class="mode-btn active" id="btn2p"  onclick="setMode('2p')">2 Players</button>
+  <button class="mode-btn"        id="btnAI"  onclick="setMode('ai')">vs AI</button>
+</div>
+
+<!-- Scores -->
+<div class="score-bar">
+  <div class="score-card x-card">
+    <div class="label" id="xLabel">Player X</div>
+    <div class="val"   id="xScore">0</div>
+  </div>
+  <div class="score-card d-card">
+    <div class="label">Draws</div>
+    <div class="val" id="dScore">0</div>
+  </div>
+  <div class="score-card o-card">
+    <div class="label" id="oLabel">Player O</div>
+    <div class="val"   id="oScore">0</div>
+  </div>
+</div>
+
+<!-- Turn -->
+<div class="turn-indicator" id="turnIndicator">
+  <span class="turn-x">X's</span> turn
+</div>
+
+<!-- Board -->
+<div class="board-wrap">
+  <div class="board" id="board"></div>
+</div>
+
+<!-- Status -->
+<div class="status" id="status"></div>
+
+<!-- Actions -->
+<div class="actions">
+  <button class="action-btn"         onclick="newGame()">New Game</button>
+  <button class="action-btn outline" onclick="resetScores()">Reset Scores</button>
+</div>
+
+<script src="myScript.js"></script>
+
+</body>
+</html>
